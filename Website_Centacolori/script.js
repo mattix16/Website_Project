@@ -56,7 +56,7 @@
       if (!galleryImage) return;
       galleryThumbs.forEach((item) => item.classList.remove('is-active'));
       thumb.classList.add('is-active');
-      galleryImage.src = thumb.dataset.image;
+      galleryImage.src = decodeURI(thumb.dataset.image);
       galleryImage.alt = thumb.dataset.alt || 'Lavoro CENTACOLORI';
     });
   });
